@@ -29,7 +29,6 @@ while payload['limit'] < 250:
         name = name.replace('★', '')
         name = name.replace('°', '')
         name = name.replace('ä', '')
-        # rate = i.find('span', class_=f"text on score-label score-{score_index}").text
         rate = i.find('div', class_="js-top-ranking-score-col di-ib al").text
         print(rate)
         f.writerow([rank, name, rate])
